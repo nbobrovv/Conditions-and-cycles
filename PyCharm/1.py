@@ -1,19 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-import sys
+import math
 
 if __name__ == '__main__':
-    n = int(input("Введите номер месяца: "))
-
-    if n == 1 or n == 2 or n == 12:
-        print("Зима")
-    elif n == 3 or n == 4 or n == 5:
-        print("Весна")
-    elif n == 6 or n == 7 or n == 8:
-        print("Лето")
-    elif n == 9 or n == 10 or n == 11:
-        print("Осень")
+    x = float(input("Value of x? "))
+    if x <= 0:
+        y = 2 * x * x + math.cos(x)
+    elif x < 5:
+        y = x + 1
     else:
-        print("Ошибка!", file=sys.stderr)
-    exit(1)
+        y = math.sin(x) - x * x
+    print(f"y = {y}")
